@@ -1,0 +1,22 @@
+.DS_Store
+
+# Folders
+/.gradle
+**/bin
+**/build
+**/.settings
+
+# General Files
+**/.class
+**/.classpath
+**/.pmd
+**/.project
+**/*.log
+
+# Specific Files
+/dm-communication/src/testLivePrinter/java/log4j.xml
+
+/dm-ctt/src/main/java/com/lexmark/ctt/corescript/parser/CoreScriptLexer.java
+/dm-ctt/src/main/java/com/lexmark/ctt/corescript/parser/CoreScriptParser.java
+/dm-ctt/src/main/java/com/lexmark/ctt/corescript/parser/CoreScriptTokenTypes.java
+/dm-ctt/src/main/java/com/lexmark/ctt/corescript/parser/CoreScriptTokenTypes.txt
