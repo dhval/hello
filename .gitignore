@@ -1,0 +1,36 @@
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.log
+
+#java specific
+*.class
+*.jar
+*.war
+*.ear
+*.bak
+*.classpath
+*.project
+
+
+project-root-directory/
+build/*
+dist/*
+nbproject/*
+
+project-sub-directory/
+/*/src/client/
+/*/lib/
+!/lib/*
+*/build/
+*/dist/
+*/nbproject/
+*/build-impl.xml
+*/private/
+*/project.properties
+*/project.xml
+*/test/
+/*/build.xml
