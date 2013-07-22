@@ -1,4 +1,4 @@
-package javaalg;
+package sample.algo;
 
 import java.util.Arrays;
 

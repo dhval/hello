@@ -3,7 +3,7 @@ Assumption: The lists a and b which are the input parameters contain distinct in
 The integers are unique within each list. The function getIntersection returns a list which has the integers that appear in both lists.
 Eg: List a -->  4,5,8,9,10 List b -->  1,3,4,9,11 Output List --> 4,9
  */
-package org.dhval.algo;
+package sample.algo;
 
 import java.util.ArrayList;
 import java.util.Arrays;

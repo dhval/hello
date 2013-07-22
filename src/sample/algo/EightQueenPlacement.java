@@ -1,4 +1,4 @@
-package org.dhval.algo;
+package sample.algo;
 
 /*************************************************************************
  *  Solve the 8 queens problem using recursion and backtracing.

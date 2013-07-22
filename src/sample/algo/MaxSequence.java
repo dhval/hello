@@ -5,7 +5,7 @@ which monotonically increases. for ex. array = {1 4 8 2 5 7 3 4 6}, the longest
 subsequence = {1 2 3 4 6}
 */
 
-package dhval.demo.algo;
+package sample.algo;
 
 /**
  *

@@ -34,3 +34,4 @@ project-sub-directory/
 */project.xml
 */test/
 /*/build.xml
+/bin

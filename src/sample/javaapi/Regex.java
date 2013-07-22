@@ -1,4 +1,4 @@
-package sample;
+package sample.javaapi;
 
 import java.util.regex.*;
 

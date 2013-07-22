@@ -1,7 +1,7 @@
 /*
 F(n) = F(n-1) + F(n-2)
  */
-package dhval.demo.algo;
+package sample.algo;
 
 /**
  *

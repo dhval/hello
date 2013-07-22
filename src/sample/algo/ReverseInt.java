@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package samples.chap1;
+package sample.algo;
 
 /**
  *

@@ -1,4 +1,4 @@
-package org.dhval.algo;
+package sample.algo;
 
 import java.util.Arrays;
 
