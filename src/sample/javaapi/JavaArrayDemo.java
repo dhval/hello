@@ -1,4 +1,4 @@
-package org.dhval.javasample;
+package sample.javaapi;
 
 import java.util.Arrays;
 import org.apache.commons.lang.StringUtils;

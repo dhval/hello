@@ -1,4 +1,4 @@
-package org.dhval.javasample;
+package sample.javaapi;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
