@@ -12,6 +12,7 @@
 **/.pmd
 **/.project
 **/*.log
+**/.c9revisions
 
 # Specific Files
 /dm-communication/src/testLivePrinter/java/log4j.xml
