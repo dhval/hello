@@ -67,5 +67,12 @@ public class Regex {
 		} else {
 			System.out.println("NO Match !");
 		}
+		
+		Pattern PALP4 = Pattern.compile("\\w*");
+		Matcher MAlP4 = PALP4.matcher(" H HH L");
+		while (MAlP4.find()) {
+			System.out.println(MAlP4.group(0));
+		} 
+		System.out.println("--END--" + " dd dd we T jj ()#4 dsfs".replaceAll("\\W", "") + "--");
 	}
 }

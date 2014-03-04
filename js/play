@@ -1,0 +1,7 @@
+require(["alert-util"], function(util) { 
+    var msg = {
+        title : "hello",
+        content : "congrats you got an error"
+    };
+    util.showMessage(msg); 
+});
