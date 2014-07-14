@@ -1,23 +1,0 @@
-9
-
-dir
-0
-https://java-samples-dhval.googlecode.com/svn/branches/samples/src/org
-https://java-samples-dhval.googlecode.com/svn
-add
-
-
-
-
-
-
-
-svn:special svn:externals svn:needs-lock
-
-dhval
-dir
-
-
-
-add
-
