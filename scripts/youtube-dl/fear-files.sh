@@ -17,6 +17,7 @@ fi
 while true
 do
 	for i in `cat "$PATH_TO_FILE"`;
+		echo `curl -x localhost:8118 ipinfo.io 2>/dev/null`
 		echo $i
 		do youtube-dl --verbose  -o $OUTPUT_DIR$FILE_FORMAT $i;
 		sleep 5;

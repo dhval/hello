@@ -1,7 +1,16 @@
-require(["alert-util"], function(util) { 
-    var msg = {
+define("ut", ["alert-util"], function(util) { 
+    var m = {
         title : "hello",
         content : "congrats you got an error"
     };
-    util.showMessage(msg); 
+    return { msg : util.showMessage };
+});
+util.showMessage(m);
+
+require(["ut"], function(util) { 
+    var m = {
+        title : "helloss",
+        content : "congrats you got an error"
+    };
+    util.msg(m); 
 });
