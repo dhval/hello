@@ -1,0 +1,1 @@
+/Users/Dhval/git-repository/gist/8bcacb2d22dbb697f339/scrapy.py

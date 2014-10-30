@@ -9,6 +9,8 @@
 *.log
 /*.txt
 /*.json
+/*.csv
+/*.xml
 
 #java specific
 **/.class
@@ -40,3 +42,9 @@ project-sub-directory/
 */test/
 /*/build.xml
 /bin
+
+
+# python - only include py files.
+!py/
+py/*
+!py/*.py

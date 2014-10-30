@@ -21,7 +21,12 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
-    
+    <dependency>
+	<groupId>com.google.guava</groupId>
+	<artifactId>guava</artifactId>
+	<version>17.0</version>
+</dependency>
+
         <dependency>
     
             <groupId>org.hsqldb</groupId>
@@ -56,6 +61,28 @@
             <artifactId>log4j</artifactId>
             <version>1.2.15</version>
             <type>jar</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.sun.jdmk</groupId>
+                    <artifactId>jmxtools</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.sun.jmx</groupId>
+                    <artifactId>jmxri</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.jms</groupId>
+                    <artifactId>jms</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.mail</groupId>
+                    <artifactId>mail</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.activation</groupId>
+                    <artifactId>activation</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.oracle.weblogic</groupId>

@@ -15,29 +15,38 @@ import weblogic.security.internal.SerializedSystemIni;
 import weblogic.security.internal.encryption.ClearOrEncryptedService;
 
 /**
-*
-* @author C-credman
-*/
+ *
+ *  java -classpath ~/java/weblogic12/wls/wlserver/server/lib/weblogic.jar:. wls.WebLogicDecryptor
+ *      /Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain
+ *      /Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain/config/jdbc/OmbrePool-3539-jdbc.xml
+ *
+ * @author C-credman
+ */
 public class WebLogicDecryptor {
 
     private static final String PREFIX = "{AES}";
     private static final String XPATH_EXPRESSION
-        = "//node()[starts-with(text(), '" + PREFIX + "')] | //@*[starts-with(., '" + PREFIX + "')]";
+            = "//node()[starts-with(text(), '" + PREFIX + "')] | //@*[starts-with(., '" + PREFIX + "')]";
 
     private static ClearOrEncryptedService ces;
     private static ClearOrEncryptedService myCes;
 
     public static void main(String[] args) throws Exception {
-        if (args.length < 2) {
-            throw new Exception("Usage: [domainDir] [configFile]");
+        String domain;
+        String inputFile;
+        if (args.length == 2) {
+            domain = args[0];
+            inputFile = args[1];
+        } else {
+            domain = "/Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain";
+            inputFile = "/Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain/config/jdbc/OmbrePool-3539-jdbc.xml";
         }
 
-        ces = new ClearOrEncryptedService(SerializedSystemIni.getEncryptionService(new File(args[0]).getAbsolutePath()));
-        File file = new File(args[1]);
+        ces = new ClearOrEncryptedService(SerializedSystemIni.getEncryptionService(new File(domain).getAbsolutePath()));
+        File file = new File(inputFile);
         if (file.getName().endsWith(".xml")) {
             processXml(file);
-        }
-        else if (file.getName().endsWith(".properties")){
+        } else if (file.getName().endsWith(".properties")) {
             processProperties(file);
         }
     }
@@ -45,7 +54,7 @@ public class WebLogicDecryptor {
     private static void processXml(File file) throws Exception {
         Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(file);
         XPathExpression expr = XPathFactory.newInstance().newXPath().compile(XPATH_EXPRESSION);
-        NodeList nodes = (NodeList)expr.evaluate(doc, XPathConstants.NODESET);
+        NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
         for (int i = 0; i < nodes.getLength(); i++) {
             Node node = nodes.item(i);
             print(node.getNodeName(), node.getTextContent());
@@ -63,7 +72,7 @@ public class WebLogicDecryptor {
     }
 
     private static void print(Object attributeName, Object encrypted) {
-        String decrypted = ces.decrypt((String)encrypted);
+        String decrypted = ces.decrypt((String) encrypted);
         System.out.println("Node name: " + attributeName);
         System.out.println("Encrypted: " + encrypted);
         System.out.println("Decrypted: " + decrypted + "\n");
