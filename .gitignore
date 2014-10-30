@@ -1,24 +1,30 @@
 # General Files
-**/.class
-**/.classpath
 **/.pmd
 **/.project
 **/*.log
-## generic files to ignore
-*~
 *.lock
 *.DS_Store
 *.swp
 *.out
 *.log
+/*.txt
+/*.json
+
+#java specific
+**/.class
+*.jar
+*.war
+*.ear
+*.bak
 *.classpath
 *.project
 
-
+#project ide-lang specific
 project-root-directory/
 build/*
 dist/*
 nbproject/*
+target/*
 
 project-sub-directory/
 /*/src/client/
