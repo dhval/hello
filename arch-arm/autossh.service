@@ -1,0 +1,14 @@
+# https://wiki.archlinux.org/index.php/Secure_Shell#Autossh_-_automatically_restarts_SSH_sessions_and_tunnels
+# Location, /etc/systemd/system/autossh.service
+
+[Unit]
+Description=AutoSSH service
+After=network.target
+
+[Service]
+Environment="AUTOSSH_GATETIME=0"
+ExecStart=/usr/bin/autossh -M 0 -NR 9443:0.0.0.0:443 nexus -o ServerAliveInterval=600 -o ServerAliveCountMax=30 -o TCPKeepAlive=yes nexus
+
+[Install]
+WantedBy=multi-user.target
+Alias=autossh.service
