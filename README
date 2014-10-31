@@ -1,3 +1,125 @@
 # Hello World
 
 * some fun stuff laying around *
+
+| Java | Java Script | Python | Shell |
+
+$ tree -P "*.java|*.js|*.groovy|*.py|*.sh|*.applescript|*.cpp|*.service"
+.
+├── arch-arm
+│   ├── autossh.service
+│   └── wireless.service
+├── cpp
+│   ├── empty.cpp
+│   ├── palindrome.cpp
+│   └── pointer-demo.cpp
+├── groovy
+│   ├── alg
+│   │   ├── ClosestPair.groovy
+│   │   ├── Fibonacci.groovy
+│   │   ├── FindSum.groovy
+│   │   └── countsort.groovy
+│   ├── crawl.groovy
+│   ├── crawl1.groovy
+│   ├── curl.groovy
+│   ├── report.groovy
+│   ├── sample
+│   │   ├── ApacheCommon.groovy
+│   │   ├── GSnip.groovy
+│   │   └── RegularETest.groovy
+│   ├── stat.groovy
+│   └── stat1.groovy
+├── js
+│   ├── casper
+│   │   ├── jquery.js
+│   │   └── zeetv.js
+│   ├── ecma5object.js
+│   ├── ecma5play.js
+│   ├── hashchange.js
+│   └── lexical-scoping.js
+├── osx
+│   └── sendMessage.applescript
+├── py
+│   ├── captcha-samples
+│   │   └── captcha.py
+│   ├── capthca.py
+│   ├── file_parser.py
+│   ├── josh.py
+│   ├── proxy-ports.py
+│   ├── proxy.py
+│   ├── scrapy.py
+│   ├── soap_ssl.py
+│   └── wlst-deploy.py
+├── scripts
+│   ├── getpass.sh
+│   ├── printer.sh
+│   ├── trap-demo.sh
+│   └── youtube-dl.sh
+└── src
+    └── main
+        └── java
+            ├── sample
+            │   ├── algo
+            │   │   ├── EightQueenPlacement.java
+            │   │   ├── FibonacciDynPrgmg.java
+            │   │   ├── IntersectionFinder.java
+            │   │   ├── Main.java
+            │   │   ├── MaxSequence.java
+            │   │   ├── PalindroneNumber.java
+            │   │   ├── PermutationGenerator.java
+            │   │   ├── ReverseInt.java
+            │   │   ├── Samples.java
+            │   │   ├── StringPermutation.java
+            │   │   └── euler
+            │   │       ├── Problem1.java
+            │   │       ├── Problem2.java
+            │   │       └── Problem4.java
+            │   ├── chatbox
+            │   │   ├── CBValidations.java
+            │   │   ├── ChatBoxRunner.java
+            │   │   ├── FileParser.java
+            │   │   ├── FormLoginDemo.java
+            │   │   ├── GlobalConstants.java
+            │   │   ├── HSQLDBManager.java
+            │   │   ├── MyHttpClient.java
+            │   │   ├── PrxoyChecker.java
+            │   │   ├── SAXParserExample.java
+            │   │   ├── ShutDownHook.java
+            │   │   └── Status.java
+            │   ├── concurrent
+            │   │   ├── ProducerConsumer.java
+            │   │   └── ReaderWriter.java
+            │   ├── guava
+            │   │   └── CombineKeys.java
+            │   ├── hsql
+            │   │   └── HSQLMgr.java
+            │   ├── http
+            │   │   └── HttpClient.java
+            │   ├── javaapi
+            │   │   ├── DateHelper.java
+            │   │   ├── JavaArrayDemo.java
+            │   │   ├── ParseDt.java
+            │   │   ├── Regex.java
+            │   │   ├── RegexDate.java
+            │   │   └── file
+            │   │       ├── DHExtracter.java
+            │   │       ├── FileFormater.java
+            │   │       ├── JSONPrinter.java
+            │   │       └── MergeContacts.java
+            │   ├── multiplesocketserver
+            │   │   ├── CmdExec.java
+            │   │   ├── MultipleSocketServer.java
+            │   │   ├── MultipleSocketServerThread.java
+            │   │   └── SocketClient.java
+            │   └── prob
+            │       ├── DiveRunner.java
+            │       ├── Diver.java
+            │       └── Judge.java
+            ├── sol
+            │   └── chap6
+            │       ├── DutchPartition.java
+            │       ├── FindKSmall.java
+            │       ├── QuickSort.java
+            │       └── ShareBuySell.java
+            └── wls
+                └── WebLogicDecryptor.java
