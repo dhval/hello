@@ -3,6 +3,7 @@
 * some fun stuff laying around *
 
 | Java | Java Script | Python | Shell |
+| ------------ | ------------- | ------- | ------------------- |
 
 $ tree -P "*.java|*.js|*.groovy|*.py|*.sh|*.applescript|*.cpp|*.service"
 .
