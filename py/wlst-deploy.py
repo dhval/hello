@@ -49,7 +49,7 @@ def clusterState():
 	state(clusterName,"Cluster")
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
 	print sys.argv
 	parser = OptionParser()
 	parser.add_option("--deploy", dest="deploy", default=False,
