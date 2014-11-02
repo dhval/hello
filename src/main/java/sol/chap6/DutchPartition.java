@@ -1,7 +1,7 @@
 package sol.chap6;
 
 import java.util.Arrays;
-import java.util.Random;
+import sample.Utility;
 
 /**
  * Dijkstra's Dutch patition or 3 way partition invloves dividing an array in 3
@@ -25,41 +25,25 @@ public class DutchPartition {
         int hi = A.length - 1;
         for (int i = 0; i <= hi;) {
             if (A[i] < piv1) {
-                swap(A, i, lo);
+                Utility.swap(A, i, lo);
                 lo++;
                 i++;
             } else if (A[i] >= piv1 && A[i] <= piv2) {
                 i++;
             } else {
-                swap(A, i, hi);
+                Utility.swap(A, i, hi);
                 hi--;
             }
         }
         return A;
     }
 
-    private static int[] randArray() {
-        int[] A = new int[10];
-        Random rand = new Random();
-        for (int i = 0; i < 10; i++) {
-            A[i] = rand.nextInt(11);
-        }
-        return A;
-    }
-
-    private static void swap(int[] A, int i, int j) {
-        if (i == j) {
-            return;
-        }
-        int tmp = A[i];
-        A[i] = A[j];
-        A[j] = tmp;
-    }
 
     public static void main(String[] s) {
         int pivot1 = 4;
         int pivot2 = 6;
-        int[] A = randArray();
+        int length = pivot1 + pivot2;
+        int[] A = Utility.randArray(length);
         System.out.println(Arrays.toString(A));
         A = dutchPart(A, pivot1, pivot2);
         System.out.println(Arrays.toString(A));
