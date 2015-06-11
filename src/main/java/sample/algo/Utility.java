@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package sample;
+package sample.algo;
 
 import java.util.Random;
 
