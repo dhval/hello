@@ -14,6 +14,20 @@ import org.xml.sax.SAXException;
 
 import org.xml.sax.helpers.DefaultHandler;
 
+class Employee {
+
+	private int id;
+	private String name;
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+}
+
 public class SAXParserExample extends DefaultHandler{
 
 	List myEmpls;
@@ -76,7 +90,7 @@ public class SAXParserExample extends DefaultHandler{
 		if(qName.equalsIgnoreCase("Employee")) {
 			//create a new instance of employee
 			tempEmp = new Employee();
-			tempEmp.setType(attributes.getValue("type"));
+			//tempEmp.setType(attributes.getValue("type"));
 		}
 	}
 	
@@ -84,21 +98,21 @@ public class SAXParserExample extends DefaultHandler{
 	public void characters(char[] ch, int start, int length) throws SAXException {
 		tempVal = new String(ch,start,length);
 	}
-	
+
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 
-		if(qName.equalsIgnoreCase("Employee")) {
+		if (qName.equalsIgnoreCase("Employee")) {
 			//add it to the list
 			myEmpls.add(tempEmp);
-			
-		}else if (qName.equalsIgnoreCase("Name")) {
+
+		} else if (qName.equalsIgnoreCase("Name")) {
 			tempEmp.setName(tempVal);
-		}else if (qName.equalsIgnoreCase("Id")) {
+		} else if (qName.equalsIgnoreCase("Id")) {
 			tempEmp.setId(Integer.parseInt(tempVal));
-		}else if (qName.equalsIgnoreCase("Age")) {
-			tempEmp.setAge(Integer.parseInt(tempVal));
+		} else if (qName.equalsIgnoreCase("Age")) {
+			// tempEmp.setAge(Integer.parseInt(tempVal));
 		}
-		
+
 	}
 	
 	public static void main(String[] args){

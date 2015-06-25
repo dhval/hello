@@ -15,7 +15,7 @@ public class ListNIFs
             out.printf("Name: %s\n", netIf.getName());
             Enumeration<InetAddress> inetAddresses = netIf.getInetAddresses();
             for (InetAddress inetAddress : Collections.list(inetAddresses)) {
-                String ipAddress = inetAddress.getLocalHost().getHostAddress();
+                String ipAddress = inetAddress.getHostAddress();
                 out.printf("InetAddress: %s\n", ipAddress);
                 if (ipAddress.matches("^(192|127).\\d{1,3}.\\d{1,3}.\\d{1,3}$")) {
                     out.printf("Match!");
