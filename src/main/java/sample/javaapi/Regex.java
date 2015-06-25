@@ -7,8 +7,32 @@ public class Regex {
 	static String subjectString = "cn=AppConfig,cn=UserApplication,cn=idm361," +
 			"ou=services,o=jnet#0#<assignment><start_tm>20091230162551Z</start_tm>";
 	
-	
-	public static void main(String[] a) {
+	static final String[] EXAMPLE_TEST = {"2013.06.01", " 2013.16.01", "2013.06.01 ", "2013.06.01 1", "201.06.01", "201306.01r"};
+    static Pattern PATTERN_DOT_DT = Pattern.compile("^(\\d{4}\\.\\d{2}\\.\\d{2})$");
+    static final SimpleDateFormat FORMAT_DOT_DT = new SimpleDateFormat("yyyy.MM.dd");
+    static final SimpleDateFormat FORMAT_DISPLAY_DT = new SimpleDateFormat("dd MMM, yyyy");
+    
+    public static void main(String[] args) {
+        for (String strTest : EXAMPLE_TEST) {
+            System.out.println(strTest + " : " + prettyDtFormat(strTest));
+        }
+    }
+    
+      private static String prettyDtFormat(String inDate) {
+        if (StringUtils.isEmpty(inDate)) {
+            return null;
+        }
+        String textDt = inDate.trim();
+        try {
+            textDt = (PATTERN_DOT_DT.matcher(textDt).find())
+                    ? FORMAT_DISPLAY_DT.format(FORMAT_DOT_DT.parse(textDt)) : textDt;
+        } catch (ParseException pe) {
+            System.out.println("ParseException for: " + inDate + pe.getMessage());
+        }
+        return textDt;
+    }
+
+	public static void test(String[] a) {
 		System.out.println("start ... ");
 		
 		subjectString = "cn=criminal-history-users,cn=Application Access,cn=Level20," +
