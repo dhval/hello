@@ -23,6 +23,14 @@ public class ListReverse {
         }
         return head;
     }
+    
+    public static Node<Integer> recursiveList(Node <Integer> start, Node<Integer> head) {
+        if (head == null)
+            return start;
+        Node<Integer> node = head.next;
+        head.next = start;
+        return recursiveList(head, node);
+    }
 
     public static void main(String[] s) {
         Integer[] array = Utility.randArray(10);
@@ -31,6 +39,8 @@ public class ListReverse {
         Node < Integer > head = Utility.build(array);
         Utility.print(head);
         head = reverseList(head);
+        Utility.print(head);
+        head = recursiveList(null, head);
         Utility.print(head);
     }
 
