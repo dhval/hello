@@ -1,7 +1,6 @@
 package sample.chatbox;
 
 import sample.chatbox.MyHttpClient;
-import com.proj.hsqldb.ProxyManager;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -41,7 +40,7 @@ public class PrxoyChecker {
             logger.error("", e);
         } finally {
             try {
-                proxyManager.shutdown();
+                // proxyManager.shutdown();
             } catch (Exception e) {
                 logger.error("", e);
             }

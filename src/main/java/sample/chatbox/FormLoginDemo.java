@@ -1,7 +1,6 @@
 package sample.chatbox;
 
 import sample.chatbox.FileParser;
-import com.proj.hsqldb.ProxyManager;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

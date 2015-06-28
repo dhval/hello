@@ -16,10 +16,11 @@ import weblogic.security.internal.encryption.ClearOrEncryptedService;
 
 /**
  *
- *  java -classpath ~/java/weblogic12/wls/wlserver/server/lib/weblogic.jar:. wls.WebLogicDecryptor
- *      /Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain
- *      /Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain/config/jdbc/OmbrePool-3539-jdbc.xml
- *
+java -classpath ~/java/weblogic12/wls/wlserver/server/lib/weblogic.jar:. wls.WebLogicDecryptor \
+ /Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain \
+ /Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain/config/jdbc/OmbrePool-3539-jdbc.xml
+
+*   mount -t smbfs smb://c-dmudawal:Poonam0*@10.1.26.51/e$ /Users/Dhval/share/wlAdmin/
  * @author C-credman
  */
 public class WebLogicDecryptor {
