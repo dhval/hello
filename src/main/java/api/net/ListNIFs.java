@@ -1,6 +1,5 @@
-package sample.javaapi.net;
+package api.net;
 
-import java.io.*;
 import java.net.*;
 import java.util.*;
 import static java.lang.System.out;

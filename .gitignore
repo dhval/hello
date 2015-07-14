@@ -2,6 +2,7 @@
 **/.pmd
 **/.project
 **/*.log
+**/*.db
 *.lock
 *.DS_Store
 *.swp
@@ -11,6 +12,8 @@
 /*.json
 /*.csv
 /*.xml
+*.iml
+*.class
 
 #java specific
 **/.class
@@ -23,10 +26,14 @@
 
 #project ide-lang specific
 project-root-directory/
+.idea/
 build/*
 dist/*
 nbproject/*
 target/*
+**/node_modules/*
+bower/*
+bower_components/*
 
 project-sub-directory/
 /*/src/client/
@@ -42,6 +49,8 @@ project-sub-directory/
 */test/
 /*/build.xml
 /bin
+/tmp
+/js/scrap/
 
 
 # python - only include py files.
