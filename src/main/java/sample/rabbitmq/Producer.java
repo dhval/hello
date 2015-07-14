@@ -1,4 +1,4 @@
-package rabbitmq.syntx;
+package sample.rabbitmq;
 
 /**
  * Created by dhval on 3/22/15.

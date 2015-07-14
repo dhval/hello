@@ -1,4 +1,4 @@
-package rabbitmq.syntx;
+package sample.rabbitmq;
 
 import java.util.HashMap;
 
