@@ -1,7 +1,6 @@
-package toi.entity;
+package sample.toi.entity;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * Created by dhval on 3/23/15.

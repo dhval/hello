@@ -1,4 +1,4 @@
-package sample.algo.count;
+package prob.count;
 
 /**
  * http://www.programcreek.com/2015/03/rotate-array-in-java/

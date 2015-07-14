@@ -1,4 +1,4 @@
-package toi.entity;
+package sample.toi.entity;
 
 import org.hibernate.*;
 import org.slf4j.Logger;

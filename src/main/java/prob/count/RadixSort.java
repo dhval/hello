@@ -1,4 +1,4 @@
-package sample.algo.count;
+package prob.count;
 
 import java.util.*;
 

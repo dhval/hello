@@ -1,6 +1,6 @@
-package sample.algo.count;
+package prob.count;
 
-import static sample.algo.Utility.*;
+import static prob.Utility.*;
 import java.util.*;
 
 public class FindMin {

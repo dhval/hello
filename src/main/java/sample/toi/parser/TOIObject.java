@@ -1,7 +1,7 @@
-package toi.parser;
+package sample.toi.parser;
 
-import toi.entity.Article;
-import toi.entity.Comment;
+import sample.toi.entity.Article;
+import sample.toi.entity.Comment;
 
 import java.util.Date;
 import java.util.List;
@@ -66,8 +66,8 @@ public class TOIObject {
         comment.setUserId(user.id);
         return comment ;
     }
-    static toi.entity.User toUser(TOIObject object, TOIObject.User user) {
-        toi.entity.User u = new toi.entity.User();
+    static sample.toi.entity.User toUser(TOIObject object, TOIObject.User user) {
+        sample.toi.entity.User u = new sample.toi.entity.User();
         u.setUserId(user.id);
         u.setFirst(user.first);
         u.setLast(user.last);

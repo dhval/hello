@@ -1,6 +1,18 @@
-# Hello World
+Hello World !
+===================================
 
-* some fun stuff laying around *
+#### Some fun stuff laying around ####
+
+* Setup JAVA *
+
+1. Install Java, JAVA_HOME
+2. Install local npm modules. `npm install`
+
+To run any java program using grunt,
+
+grunt java:Main
+
+Would search for Main.java in src/java/main/**, compile and run it.
 
 | Java | Java Script | Python | Shell |
 

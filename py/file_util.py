@@ -2,7 +2,7 @@
 
 ### Utility to keep track of duplicate files.
 
-import argparse, os, sys, sqlite3, hashlib, magic
+import argparse, os, sys, sqlite3, hashlib, magic, shutil
 
 # Returns file size in kb (divide by float 1024.00)
 def find_file_size(file):
@@ -15,8 +15,13 @@ def find_file_size(file):
 # http://stackoverflow.com/questions/5141437/filtering-os-walk-dirs-and-files
 def list_files(path, type=None):
 	for(dirpath, dirnames, filenames) in os.walk(path):
-		file = [ f for f in filenames if len(filenames)>0 and (type is None or f.endswith(type)) ]
-		print dirpath, "---", dirnames, "---", file
+		dir, file = dirpath, [ f for f in filenames if len(filenames)>0 and (type is None or f.endswith(type) and not f.endswith("0_PDF.pdf")) ]
+		for f in file:
+			src = dir+"/"+f
+			base = dir.split("/")[-1:][0]
+			dst = "/Users/Dhval/tmp/pdf/" + base + "-" + f
+			print src, "---", dst
+			shutil.copy2(src, dst)
 		print "\n"
 
 # SHA1 hash
@@ -42,4 +47,4 @@ def file_type(file):
 
 if __name__ == "__main__":
 
-	print "%f.1", list_files(sys.argv[1])
+	print "%f.1", list_files(sys.argv[1], ".pdf")

@@ -1,4 +1,4 @@
-package wls;
+package sample.wls;
 
 import java.io.File;
 import java.io.FileInputStream;

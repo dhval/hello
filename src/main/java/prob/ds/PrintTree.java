@@ -1,6 +1,6 @@
-package sample.algo.ds;
+package prob.ds;
 
-import sample.algo.Node;
+import prob.Node;
 import java.util.*;
 
 /** 

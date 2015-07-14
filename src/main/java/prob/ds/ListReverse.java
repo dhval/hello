@@ -1,8 +1,8 @@
-package sample.algo.ds;
+package prob.ds;
 
-import sample.algo.Utility;
+import prob.Utility;
 import java.util.Arrays;
-import sample.algo.Node;
+import prob.Node;
 
 public class ListReverse {
 

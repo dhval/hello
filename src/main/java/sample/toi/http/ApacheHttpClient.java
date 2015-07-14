@@ -1,4 +1,4 @@
-package toi.http;
+package sample.toi.http;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -10,12 +10,6 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 public class ApacheHttpClient implements Runnable {
 

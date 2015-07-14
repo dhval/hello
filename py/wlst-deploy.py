@@ -68,6 +68,7 @@ if __name__ == '__main__':
 	else:
 		environ = "t3://10.1.226.44:7001"
 	conn(environ)
+	print options
 	if options.install:
 		print options.deploy
 		appRedeploy(options.deploy)

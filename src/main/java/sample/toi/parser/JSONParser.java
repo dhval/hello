@@ -1,4 +1,4 @@
-package toi.parser;
+package sample.toi.parser;
 
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;

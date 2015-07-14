@@ -1,4 +1,4 @@
-package sample.algo.ds;
+package prob.ds;
 
 public class QueueIterator < E > implements Iterator < E > {
     public boolean hasNext() {

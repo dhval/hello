@@ -1,4 +1,4 @@
-package sample.algo;
+package prob;
 
 public class Node < E > {
     public E data;

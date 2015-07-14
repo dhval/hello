@@ -1,4 +1,4 @@
-package toi.parser;
+package sample.toi.parser;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,21 +7,17 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
-import toi.http.ApacheHttpClient;
-import toi.entity.MySQLDAO;
-import toi.entity.Article;
-import toi.entity.Comment;
-import toi.entity.User;
+import sample.toi.entity.MySQLDAO;
+import sample.toi.entity.Article;
+import sample.toi.entity.Comment;
+import sample.toi.entity.User;
 
-import java.io.File;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

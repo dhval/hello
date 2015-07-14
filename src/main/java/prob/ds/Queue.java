@@ -1,4 +1,4 @@
-package sample.algo.ds;
+package prob.ds;
 
 import java.util.Iterable;
 
