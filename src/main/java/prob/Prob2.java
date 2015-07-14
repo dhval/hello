@@ -6,7 +6,7 @@ import java.util.Arrays;
  *
  * @author dm
  */
-public class Main {
+public class Prob2 {
 
     static char charArray[];
     static int N;
