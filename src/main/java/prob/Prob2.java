@@ -1,60 +1,33 @@
 package prob;
 
 import java.util.Arrays;
+import static prob.Utility.*;
 
 /**
  *
- * @author dm
- */
+ * Shift an array. When a number moves off the right side of the array, it becomes the first element.
+a. [1,2,3] rotated right by 1 would be [3, 1, 2].
+b. [1, 2, 3, 4, 5, 6, 7] rotated right by 3 would be [3, 4, 5, 6, 7, 1, 2]
+
+*/
 public class Prob2 {
 
-    static char charArray[];
-    static int N;
+    static void shift(Integer[] A, int k) {
+        if (k <= 0) return;
+        int length = A.length - 1;
+        while (k > 0) {
+            for (int i = length; i > 0; i--)
+                swap(A, i, i - 1);
+            System.out.println(Arrays.toString(A));
+            k--;
+        }
+    }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        charArray = new char[3];
-        charArray[0] = 'A';
-        charArray[1] = 'B';
-        charArray[2] = 'C';
-        N = charArray.length - 1;
-//        permute(0);
-        permute2(2);
-        System.out.println(result);
-        // TODO code application logic here
-    }
-
-    public static void permute(int i) {
-        if (i == N)
-            System.out.println(Arrays.toString(charArray));
-   else
-      for (int j = i; j <= N; j++) {
-         swap(i, j);
-         permute(i+1);
-         swap(i, j);
-    }
-    }
-
-    static int result = 0;
-
-     public static void permute2(int i) {
-         if (i == 1) {
-             result++;
-             System.out.println(Arrays.toString(charArray));
-         } else {
-             for (int j = N - i + 1; j <= N; j++) {
-//                 swap(i, j);
-                 permute2(i - 1);
-                 swap(i, j);
-             }
-         }
-    }
-
-    public static void swap(int a, int b) {
-        char tmp = charArray[a];
-        charArray[a] = charArray[b];
-        charArray[b] = tmp;
+        int max = 13;
+        Integer[] array = new Integer[max];
+        for (int i = 0; i < max; i++)
+            array[i] = i + 1;
+        shift(array, 3);
     }
 }

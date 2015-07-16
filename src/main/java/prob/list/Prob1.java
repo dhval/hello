@@ -47,11 +47,12 @@ Check if heads are not null, return non null head.
 repeat step 3
 
 */
+
 /*
 Enter your Big O Analysis here.
 
-// Running time is m*n where m is size of list1, n is size of list2.
-// Since we can destroy the list we need one Node object to store head.
+Running time is m + n where m is size of list1, n is size of list2.
+Since we can destroy the list we need one Node object to store head.
 
 **/
 

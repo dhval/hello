@@ -25,6 +25,18 @@ public class Utility {
 
     /**
      * 
+     * @return A sorted integer array. 
+     */
+    public static Integer[] sortArray(int size) {
+        Integer[] A = new Integer[size];
+        for (int i = 0; i < size; i++) {
+            A[i] = i;
+        }
+        return A;
+    }
+
+    /**
+     * 
      * @param A, array to be swapped
      * @param i, index of first element
      * @param j, index of second element 
@@ -92,5 +104,9 @@ public class Utility {
         }
         return head;
     }
+    
+    static void debugger(int i) {
+		System.out.println("debugger #" + i);
+	}
 
 }
