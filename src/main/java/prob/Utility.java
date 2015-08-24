@@ -1,7 +1,6 @@
 package prob;
 
 import prob.Node;
-
 import java.util.Random;
 
 /**
@@ -11,8 +10,8 @@ import java.util.Random;
 public class Utility {
 
     /**
-     * 
-     * @return A random integer array. 
+     *
+     * @return A random integer array.
      */
     public static Integer[] randArray(int len) {
         Integer[] A = new Integer[len];
@@ -24,8 +23,8 @@ public class Utility {
     }
 
     /**
-     * 
-     * @return A sorted integer array. 
+     *
+     * @return A sorted integer array.
      */
     public static Integer[] sortArray(int size) {
         Integer[] A = new Integer[size];
@@ -36,10 +35,10 @@ public class Utility {
     }
 
     /**
-     * 
+     *
      * @param A, array to be swapped
      * @param i, index of first element
-     * @param j, index of second element 
+     * @param j, index of second element
      */
     public static void swap(Integer[] A, int i, int j) {
         if (i == j) {
@@ -51,9 +50,9 @@ public class Utility {
     }
 
     /**
-     * Partion the array at k'th element. 
+     * Partion the array at k'th element.
      * Store bigger elements towards the end. Partition element(s) toward begining.
-     * 
+     *
      **/
     public static void partition(Integer[] A, int k) {
         int el = k;
@@ -77,7 +76,7 @@ public class Utility {
     /**
      * Print a list of nodes.
      **/
-    public static < E > void print(Node< E > head) {
+    public static < E > void print(Node head) {
         System.out.format("\nHead-%s\n", head.data);
         int counter = 0;
         while (head != null && counter++ < 50) {
@@ -104,7 +103,7 @@ public class Utility {
         }
         return head;
     }
-    
+
     static void debugger(int i) {
 		System.out.println("debugger #" + i);
 	}
