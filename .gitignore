@@ -37,6 +37,9 @@ target/*
 bower/*
 bower_components/*
 
+# Hide local resource
+src/main/resources/
+
 project-sub-directory/
 /*/src/client/
 /*/lib/
