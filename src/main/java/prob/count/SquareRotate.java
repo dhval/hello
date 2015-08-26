@@ -11,7 +11,7 @@ private static Integer[][] create() {
     for(int i=0; i<ROW; i++)
         for(int j=0; j<COL; j++)
             A[i][j] = count++;
-    return A;    
+    return A;
 }
 
 private static void print(Integer A[][], int r, int c) {
@@ -23,7 +23,7 @@ private static void print(Integer A[][]) {
         for(int j=0; j<COL; j++)
             System.out.print(A[i][j] + " ");
         System.out.println("");
-    }    
+    }
 }
 
 public static void printClockWise(Integer A[][]) {
@@ -37,29 +37,29 @@ public static void printClockWise(Integer A[][]) {
             print(A, x, y--);
         else
             print(A, x, y++);
-    } while ( !(x==0 && y==0) ); 
-} 
+    } while ( !(x==0 && y==0) );
+}
 
 /**
  * http://stackoverflow.com/questions/42519/how-do-you-rotate-a-two-dimensional-array
  **/
- 
+
 public static Integer[][] rotate(Integer A[][]) {
     Integer T[][] = new Integer[COL][ROW];
-    for(int i=0; i<COL; i++) {
+    for(int i=0; i<COL; i++)
        for(int j=0; j<ROW; j++)
-            T[i,j] = A[COL-j-1,i];
-    return T;        
+            T[i][j] = A[COL-j][i];
+    return T;
 }
 
 public static void main (String[] args) {
-    
+
     System.out.println("hi...");
-    
+
     Integer A[][] = create();
     printClockWise(A);
-    
-    
+
+
 }
 
 }

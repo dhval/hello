@@ -28,17 +28,63 @@
 
     <repositories>
         <repository>
-            <id>codehaus</id>
-            <url>http://repository.codehaus.org/org/codehaus</url>
+            <id>com.springsource.repository.bundles.external</id>
+            <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+            <url>http://repository.springsource.com/maven/bundles/external</url>
+        </repository>
+        <repository>
+            <id>java.net2</id>
+            <name>Repository hosting the jee6 artifacts</name>
+            <url>http://download.java.net/maven/2</url>
+        </repository>
+        <repository>
+            <id>jboss-public-repository-group</id>
+            <url>https://repository.jboss.org/nexus/content/groups/public-jboss</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                  <executions>
+                    <execution>
+                      <goals>
+                        <goal>java</goal>
+                      </goals>
+                    </execution>
+                  </executions>
+                <configuration>
+                    <includePluginDependencies>true</includePluginDependencies>
+                    <mainClass>prob.amzn.PairSum</mainClass>
+                    <arguments>
+                        <argument>hello</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>1.9.13</version>
+        </dependency>
+        <!-- mvn install:install-file -Dfile=weblogic.jar -DgroupId=com.oracle.weblogic -DartifactId=weblogic-maven-plugin -Dversion=12.1.1.0 -Dpackaging=jar -->
+        <dependency>
+            <groupId>com.oracle.weblogic</groupId>
+            <artifactId>weblogic-maven-plugin</artifactId>
+            <version>12.1.1.0</version>
+            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>
@@ -148,12 +194,6 @@
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
             <version>2.3.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.oracle.weblogic</groupId>
-            <artifactId>weblogic-maven-plugin</artifactId>
-            <version>12.1.1.0</version>
-            <type>jar</type>
         </dependency>
         <!-- Rabbit MQ -->
         <dependency>

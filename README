@@ -8,11 +8,21 @@ Hello World !
 1. Install Java, JAVA_HOME
 2. Install local npm modules. `npm install`
 
-To run any java program using grunt,
+To run any java program using javac,
 
-grunt java:Main
+ javac -d bin/ -sourcepath src/main/java/ src/main/java/prob/amzn/PairSum.java
+ java -cp bin/ prob.amzn.PairSum
 
-Would search for Main.java in src/java/main/**, compile and run it.
+To run any java program using grunt, see Gruntfile
+
+ grunt java:Main
+
+ Would search for Main.java in src/java/main/**, compile and run it.
+
+To run java file using maven exec plugin
+
+
+mvn -X clean install exec:java -Dexec.mainClass=prob.amzn.PairSum
 
 | Java | Java Script | Python | Shell |
 

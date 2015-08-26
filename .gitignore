@@ -26,6 +26,7 @@
 
 #project ide-lang specific
 project-root-directory/
+.m2/
 .idea/
 build/*
 dist/*
