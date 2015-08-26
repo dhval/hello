@@ -28,6 +28,7 @@
 project-root-directory/
 .m2/
 .idea/
+lib/
 build/*
 dist/*
 nbproject/*

@@ -1,13 +1,18 @@
 package prob.ds;
 
+import java.util.Iterator;
+
 public class QueueIterator < E > implements Iterator < E > {
     public boolean hasNext() {
 
         //implement...
+
+        return false;
     }
 
-    public T next() {
+    public E next() {
         //implement...;
+        return  null;
     }
 
     public void remove() {

@@ -1,6 +1,6 @@
 package prob.ds;
 
-import java.util.Iterable;
+import java.util.Iterator;
 
 public class Queue < E > implements Iterable < E > {
 
