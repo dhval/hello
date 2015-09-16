@@ -15,14 +15,14 @@ module.exports = function(grunt) {
     // Configurable paths for the application
     var appConfig = {
         app: '.',
-        dist: 'angular/dist',
-        hostname: 'localhost',
-        port: 9000,
+        dist: 'html/dist',
+        hostname: '0.0.0.0',
+        port: 9001,
         url: function(file) {
             file = file || 'index.html';
             return 'http://' + this.hostname + ':' + this.port + '/' + file;
         },
-        livereload: 35728,
+        livereload: 35729,
         verbose: true,
         cwd: path.resolve()
     };

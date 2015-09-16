@@ -30,7 +30,7 @@ project-root-directory/
 .idea/
 lib/
 build/*
-dist/*
+html/dist/*
 nbproject/*
 target/*
 **/node_modules/*
