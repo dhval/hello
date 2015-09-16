@@ -48,7 +48,7 @@ static {
     ARRAY[i] = prob.Utility.randArray(ranInt);
     Arrays.sort(ARRAY[i]);
     SIZE += ARRAY[i].length;
-    System.out.println("k=" + i + "---" + Arrays.toString(ARRAY[i]));
+    System.out.println("k = " + i + "---" + Arrays.toString(ARRAY[i]));
   }
 }
 

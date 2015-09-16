@@ -64,10 +64,6 @@
                   </executions>
                 <configuration>
                     <includePluginDependencies>true</includePluginDependencies>
-                    <mainClass>prob.amzn.PairSum</mainClass>
-                    <arguments>
-                        <argument>hello</argument>
-                    </arguments>
                 </configuration>
             </plugin>
         </plugins>
@@ -79,7 +75,8 @@
             <artifactId>jackson-mapper-asl</artifactId>
             <version>1.9.13</version>
         </dependency>
-        <!-- mvn install:install-file -Dfile=weblogic.jar -DgroupId=com.oracle.weblogic -DartifactId=weblogic-maven-plugin -Dversion=12.1.1.0 -Dpackaging=jar -->
+        <!-- Even in 2015, Oracle hasn't come up with open repositories. -->
+        <!-- mvn install:install-file -Dfile=lib/weblogic-maven-plugin-12.1.1.0.jar -DgroupId=com.oracle.weblogic -DartifactId=weblogic-maven-plugin -Dversion=12.1.1.0 -Dpackaging=jar -->
         <dependency>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>weblogic-maven-plugin</artifactId>
@@ -95,8 +92,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <version>4.11</version>
         </dependency>
         <!-- logging: -->
         <dependency>

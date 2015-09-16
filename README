@@ -19,10 +19,16 @@ To run any java program using grunt, see Gruntfile
 
  Would search for Main.java in src/java/main/**, compile and run it.
 
-To run java file using maven exec plugin
+To run java file using maven exec plugin - all files must compile
+
+ mvn compile exec:java -Dexec.mainClass="prob.amzn.MergeArray"
+
+You may use other options like, you need to compile every time source code changes. [SO](http://stackoverflow.com/questions/10108374/maven-how-to-run-a-java-file-from-command-line-passing-arguments)
+ -Dexec.args="'argument separated with space' 'another one'"
+ -Dexec.classpathScope=runtime
+  mvn exec:help -Ddetail=true -Dgoal=java
 
 
-mvn -X clean install exec:java -Dexec.mainClass=prob.amzn.PairSum
 
 | Java | Java Script | Python | Shell |
 

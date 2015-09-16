@@ -22,7 +22,7 @@ module.exports = function(grunt) {
             file = file || 'index.html';
             return 'http://' + this.hostname + ':' + this.port + '/' + file;
         },
-        livereload: 35729,
+        livereload: 35728,
         verbose: true,
         cwd: path.resolve()
     };

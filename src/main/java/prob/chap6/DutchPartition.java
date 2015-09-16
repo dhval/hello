@@ -19,7 +19,7 @@ import prob.Utility;
  */
 public class DutchPartition {
 
-    private static int[] dutchPart(int[] A, int piv1, int piv2) {
+    private static Integer[] dutchPart(Integer[] A, int piv1, int piv2) {
         // check array not empty and length >1 and piv1 <= piv2
         int lo = 0;
         int hi = A.length - 1;
@@ -43,7 +43,7 @@ public class DutchPartition {
         int pivot1 = 4;
         int pivot2 = 6;
         int length = pivot1 + pivot2;
-        int[] A = null;
+        Integer[] A = null;
         System.out.println(Arrays.toString(A));
         A = dutchPart(A, pivot1, pivot2);
         System.out.println(Arrays.toString(A));
