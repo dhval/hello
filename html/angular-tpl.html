@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="app">
+
+<head>
+    <title>Angular Digest Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <link data-require="bootstrap-css@*" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <link data-require="bootstrap@3.3.1" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script data-require="angular.js@1.3.15" data-semver="1.3.15" src="https://code.angularjs.org/1.3.15/angular.js"></script>
+    <style>
+    html,
+    body,
+    input,
+    select,
+    textarea {
+        font-size: .95em !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div ng-app="app" ng-controller="Parent">
+        <label>Parent: </label> <span id="parent">{{name}}</span>
+        <div ng-controller="Child">
+            <label>Parent: </label> <span id="child">{{name}}</span>
+        </div>
+    </div>
+    <div>
+        <button id="btn1"> Run digest on Parent </button>
+        <button id="btn2"> Run digest on Child </button>
+    </div>
+</body>
+<script type="text/javascript">
+// <![CDDATA[
+
+angular.module('app', []).controller('Parent', function($scope) {
+    $scope.name = 'Parent';
+    setTimeout(function() {
+        $scope.name = 'Parent - New';
+    }, 200);
+}).controller('Child', function($scope) {
+    $scope.name = 'Child';
+    setTimeout(function() {
+        $scope.name = 'Child - New';
+    }, 200);
+});
+
+(function($) {
+    var btn1 = document.getElementById("btn1"),
+        btn2 = document.getElementById("btn2"),
+        child = document.querySelector("[ng-controller='Child']"),
+        parent = document.querySelector("[ng-controller='Parent']");
+
+    btn1.addEventListener('click', function() {
+        $(parent).scope().$digest();
+    })
+
+    btn2.addEventListener('click', function() {
+        $(child).scope().$digest();
+    })
+})(angular.element);
+
+// ]]>
+</script>
+
+</html>
