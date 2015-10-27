@@ -23,13 +23,12 @@ public class Demo {
   }
 
   static void say(Human person) {
-    person.setName("Marry");
+    // person.setName("Marry");
     person.sayHello("John");
   }
 
   public static void main(String[] s) {
-    Human human = new Human();
-    Person person = new Person();
-    say(person);
+    Human human = new Person();
+    say(human);
   }
 }

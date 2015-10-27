@@ -45,6 +45,7 @@ project-sub-directory/
 /*/lib/
 !/lib/*
 */build/
+**/.gradle/
 */dist/
 */nbproject/
 */build-impl.xml
