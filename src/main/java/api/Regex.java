@@ -93,4 +93,3 @@ public class Regex {
 	}
 
 }
->>>>>>> a194dafb0c9b16ab11e5c19f1176225f96eecc47
