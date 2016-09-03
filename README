@@ -10,7 +10,7 @@ Hello World !
 
 To run any java program using javac,
 
- javac -d bin/ -sourcepath src/main/java/ src/main/java/prob/amzn/PairSum.java
+ javac -d bin/ -sourcepath src/main/java/ -cp my.jar src/main/java/prob/amzn/PairSum.java
  java -cp bin/ prob.amzn.PairSum
 
 To run any java program using grunt, see Gruntfile
