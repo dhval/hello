@@ -26,14 +26,42 @@ public class ParseName {
     static String stripInvalidCharacters(String s) {
         return s.replaceAll("[^\\dA-Za-z&-/ ]", "").replaceAll("\\s+", " ");
     }
+    
+    // R2.9 - Strip all hyphens after the first hyphen.
+    static String replaceHyphen(String s) {
+        int index = s.indexOf("-");
+        System.out.println(index);
+        s = s.replaceAll("[-]+", "");
+        System.out.println(s);
+        if (index > 0) {
+            s = s.substring(0, index) + "-" + s.substring(index, s.length());
+        }
+        return s;
+    }
+    
+    static class Name {
+        String first;
+        String last;
+        String middle;
+        Name(String last) {
+            this.last = last;
+        }
+        public String toString() {
+            return "first=" + first + ", last=" + last + ", middle=" + middle; 
+        }
+    }
 
-    public static void main (String[] s) {
+    public static List<Name> parse (String s) {
         
-        if (s[0] == null || s[0].isEmpty())
-            return;
+        List<Name> names = new ArrayList<>();
+        String lastName = null;
         
-        String text = s[0].trim();
+        if (s == null || s.isEmpty())
+            return names;
+        
+        String text = s.trim();
         text = stripInvalidCharacters(text);
+        text = replaceHyphen(text);
         text = extractSlash(text);
         
         String[] nameCommaSeparated = text.split(",");
@@ -41,28 +69,36 @@ public class ParseName {
 
         // R2.2 - Validate has at least one ',' separator after first character. (like L, some thing)
         if (nameCommaSeparated.length < 2)
-            return;
+            return names;
 
         System.out.println("INPUT=" + nameCommaSeparated[0] + ", " + nameCommaSeparated[1]);    
         // extract last name    
         matcher = PATTERN_NAME.matcher(nameCommaSeparated[0]);
         if (matcher.find()) {
-            String last = matcher.group(1);
-            System.out.println("last=" + last);
+            lastName = matcher.group(1).replaceAll("&", "");
         }
         
     // R2.10 - Is there a & after the comma and between two first names.
-       for(String name : nameCommaSeparated[1].split("&")) {
-            matcher = PATTERN_NAME.matcher(name);
+       for(String str : nameCommaSeparated[1].split("&")) {
+            matcher = PATTERN_NAME.matcher(str);
+            Name name = new Name(lastName);
             if (matcher.find()) {
-                System.out.println("first=" + matcher.group(1));
+                name.first = matcher.group(1);
                 String middle = matcher.group(2);
                 if (middle != null && !middle.isEmpty() && middle.length() ==1)
-                    System.out.println("middle=" + middle);
+                    name.middle = middle;
+                names.add(name);    
             }
        }
 
-
+        return names;
+    }
+    
+    public static void main (String[] s) {
+        if (s.length !=1)
+            return;
+       List<Name> names =  parse(s[0]);
+       System.out.println(names);
     }
     
 }
