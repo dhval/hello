@@ -27,7 +27,7 @@ public class MyDate {
         System.out.println(" -- " +dt);
         System.out.println(" -- " + c.getFirstDayOfWeek());
         
-        int A = {2,3,4};
+        int[] A = {2,3,4};
         System.out.println(Arrays.toString(A));
     }
 }
