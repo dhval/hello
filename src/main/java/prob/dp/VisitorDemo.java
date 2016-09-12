@@ -1,4 +1,4 @@
-package dp;
+package prob.dp;
 
 import java.lang.Math;
 

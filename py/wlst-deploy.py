@@ -50,7 +50,7 @@ def clusterState():
 
 
 if __name__ == '__main__':
-	print sys.argv
+	print sys.argv + " hello "
 	parser = OptionParser()
 	parser.add_option("--deploy", dest="deploy", default=False,
                   help="write report to FILE", metavar="DEPLOY")
