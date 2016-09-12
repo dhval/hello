@@ -1,4 +1,4 @@
-package sample.multiplesocketserver;
+package api.socket;
 
 
 import java.io.*;
