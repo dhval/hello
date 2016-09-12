@@ -1,3 +1,6 @@
+#jekyll
+jekyll/
+
 # General Files
 **/.pmd
 **/.project
@@ -57,7 +60,7 @@ project-sub-directory/
 /bin
 /tmp
 /js/scrap/
-
+angular/
 
 # python - only include py files.
 !py/

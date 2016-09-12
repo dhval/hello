@@ -39,8 +39,13 @@ public class WebLogicDecryptor {
             domain = args[0];
             inputFile = args[1];
         } else {
+            String file = "JNETAuditLogDataSource-6479-jdbc.xml";
+            if (args.length == 1) {
+             file = args[0];
+            }
+            System.out.println("Using " + file);
             domain = "/Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain";
-            inputFile = "/Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain/config/jdbc/OmbrePool-3539-jdbc.xml";
+            inputFile = "/Users/Dhval/share/wlAdmin/Oracle/user_projects/domains/JNET_Domain/config/jdbc/" + file;
         }
 
         ces = new ClearOrEncryptedService(SerializedSystemIni.getEncryptionService(new File(domain).getAbsolutePath()));

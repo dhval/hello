@@ -203,10 +203,7 @@ module.exports = function(grunt) {
                         }
 
                         // Setup the proxy
-                        grunt.log.warn(require("grunt-connect-proxy/lib/utils").proxyRequest);
-
                         middlewares.push(require("grunt-connect-proxy/lib/utils").proxyRequest);
-
                         middlewares.push(fnLog);
 
                         // Serve static files.
